@@ -1,0 +1,21 @@
+% Input coefficients of the first equation
+a1 = input('Enter coefficient a1: ');
+b1 = input('Enter coefficient b1: ');
+c1 = input('Enter coefficient c1: ');
+
+% Input coefficients of the second equation
+a2 = input('Enter coefficient a2: ');
+b2 = input('Enter coefficient b2: ');
+c2 = input('Enter coefficient c2: ');
+
+% Define the coefficient matrix
+A = [a1, b1; a2, b2];
+
+% Define the constant matrix
+B = [-c1; -c2];
+
+% Solve the system of equations
+solution = A \ B;
+
+% Output the solution
+fprintf('The solution to the system of equations is x = %.2f, y = %.2f\n', solution(1), solution(2));
